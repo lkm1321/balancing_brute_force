@@ -1,0 +1,24 @@
+% generate_rpns generates reverse polish notation expressions of N
+% variables. 
+% N: number of variables
+% ops: operators to use
+% rpn_array: N_rpn x (2N - 1) string array containing rpn expressions
+
+function rpn_array = generate_rpns(N, ops)
+
+    
+    splittings = split(N, 2); 
+
+    % base containing v for variable and o for operator. 
+    rpn_base = char(size(splittings, 1), 2*N-1); 
+    
+    for i = 1:size(splittings, 1)
+        current_split = splittings{i}; 
+        current_rpn = [ repmat('v', 1, current_split(1)), repmat('o', 1, current_split(1)-1) ]; 
+        for j = 2:length(current_split)
+            rpn_base
+        end
+        
+    end
+    
+end
